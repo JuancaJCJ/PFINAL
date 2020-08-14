@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-const SALT_FACTOR = 10
+const mongoose = require('mongoose');
 
 const cardSchema = new mongoose.Schema({
   title: {
@@ -20,6 +19,6 @@ const cardSchema = new mongoose.Schema({
   }
 }, {timestamps: true})
 
-const User = mongoose.model('Card', cardSchema);
+const Card = mongoose.model('Card', cardSchema);
 
-module.exports = User
+module.exports = Card
