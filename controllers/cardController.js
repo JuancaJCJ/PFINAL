@@ -19,15 +19,15 @@ module.exports = {
   getCards: async(req, res)=>{
     try {
       const cards = await cardServices.getCards();
-      res.status(200).send({card});
+      res.status(200).send({cards});
     } catch (error) {
-      res.status(404).send({error});
+      res.status(404).send(console.log(error));
     }
   },
   getCard: async(req, res)=>{
     try {
       const card = await cardServices.getCard(req.params.id);
-      res.status(200).send({card});
+      res.status(200).send({cards});
     } catch (error) {
       res.status(404).send({error});
     }
